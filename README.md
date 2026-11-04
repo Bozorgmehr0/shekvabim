@@ -63,23 +63,55 @@
 
 ![مسیر رسیدگی به یک شکایت](docs/flow.gif)
 
-## راهنمای خرید و بررسی بیمه‌نامه
+## دستیار خرید و پرسش‌وپاسخ
 
-راهنمای خرید با چند پرسش کوتاه، پوشش الزامی و پیشنهادی، استثنا و مقایسه پوشش‌ها را نشان می‌دهد. پای هر مورد یک ماده است. سامانه شرکت‌ها را رتبه‌بندی نمی‌کند و قیمت اعلام نمی‌کند.
+بند ۳ فراخوان از دستیار خرید سه چیز خواسته است: شناخت نیاز، معرفی بیمه مناسب همراه با حداقل الزام قانونی، و مقایسه پوشش‌ها و استثناها. شکوابیم این را به دو شکل دارد: پرسش به زبان خودِ کاربر، و یک پرسشنامه هدایت‌شده. هیچ‌کدام شرکت بیمه را رتبه‌بندی نمی‌کنند و قیمت اعلام نمی‌کنند. هر جمله‌ای که به مقرره تکیه دارد شماره منبع دارد.
 
-![راهنمای خرید شخص ثالث](docs/screenshots/13-purchase.png)
+پرسش درباره کارگاه، به پوشش آتش، صاعقه و انفجار محل کار می‌رسد و ماده آیین‌نامه آتش‌سوزی را نشان می‌دهد.
 
-در بررسی بیمه‌نامه، هر بند جداگانه با دلیل و استناد دیده می‌شود. برچسب «احتمال مغایرت» فقط وقتی می‌آید که ماده مشخصی آن را پشتیبانی کند. اگر چنین ماده‌ای در کار نباشد، نتیجه به «نیازمند بررسی کارشناس» تنزل پیدا می‌کند و ادعای تخلف مطرح نمی‌شود.
+![پرسش درباره بیمه محل کارگاه](docs/screenshots/21-qa-workshop.png)
 
-![بررسی بندبه‌بند یک بیمه‌نامه نمونه](docs/screenshots/14-policy.png)
+پرسش درباره خودرو، تکلیف دارنده وسیله نقلیه به تهیه بیمه شخص ثالث را از متن قانون می‌آورد.
+
+![پرسش درباره اجباری بودن شخص ثالث](docs/screenshots/22-qa-car.png)
+
+پرسش درباره پوشش و استثنا، سیل و زلزله را خارج از پوشش پایه بدنه می‌گذارد مگر آنکه در بیمه‌نامه یا الحاقیه توافق شده باشد.
+
+![پرسش درباره استثنای سیل و زلزله در بدنه](docs/screenshots/23-qa-exclusion.png)
+
+اگر پرسش در آیین‌نامه‌های سامانه نباشد، دستیار جوابی از خودش نمی‌سازد و می‌گوید مستندی پیدا نکرده است.
+
+![امتناع از پاسخ بدون منبع](docs/screenshots/24-qa-refusal.png)
+
+مسیر هدایت‌شده برای کسی است که نمی‌داند چه بپرسد. رشته را انتخاب می‌کند، به چند پرسش کوتاه جواب می‌دهد، و خروجی ثابت می‌گیرد: بیمه‌های الزامی، پوشش و استثنا، جدول مقایسه، و چک‌لیست پیش از خرید. پای هر ردیف یک ماده است. در نمونه شخص ثالث، بیمه شخص ثالث و حوادث راننده الزامی آمده‌اند و حداقل قانونی با پوشش مالی بالاتر مقایسه شده است.
+
+![پرسشنامه، پوشش الزامی، مقایسه و چک‌لیست خرید](docs/screenshots/25-purchase-guide.png)
+
+## بررسی هوشمند بیمه‌نامه
+
+بند ۳ همچنین خواسته هر بند بیمه‌نامه با سه جزء دیده شود: مورد، دلیل، و مستند مقرراتی. کاربر متن بیمه‌نامه را در سامانه می‌گذارد. نمونه زیر یک بیمه‌نامه بدنه ساختگی است که برای همین نمایش چسبانده شده است.
+
+![چسباندن متن بیمه‌نامه نمونه](docs/screenshots/31-policy-paste.png)
+
+نتیجه بندبه‌بند است. برای هر بند، متن بند، دلیل، و در صورت وجود، نام آیین‌نامه و شماره ماده آمده است.
+
+![خروجی بندبه‌بند با دلیل و استناد](docs/screenshots/32-policy-items.png)
+
+استناد باز می‌شود و متن همان ماده دیده می‌شود. در این بند، مهلت ۶۰ روزه پرداخت با مهلت ۱۵ روزه آیین‌نامه بدنه نمی‌خواند، پس برچسب «احتمال مغایرت» با نقل ماده آمده است.
+
+![یک بند با متن ماده مخالف](docs/screenshots/33-policy-citation.png)
+
+جایی که مقرره سقف یا ممنوعیت مشخصی نگفته، سامانه مغایرت اعلام نمی‌کند. فرانشیز ۲۰ درصد و واگذاری بلایای طبیعی به تشخیص شرکت، هر دو «نیازمند بررسی کارشناس» مانده‌اند، چون آیین‌نامه عدد فرانشیز را تعیین نکرده و پوشش بلایا را موکول به توافق در بیمه‌نامه کرده است.
+
+![نبود ادعای مغایرت وقتی منبع کافی نیست](docs/screenshots/34-policy-no-claim.png)
+
+پرسش پوشیده‌شدن یا نپوشیده‌شدن هم به همین شکل جواب می‌گیرد. فرانشیز و استهلاک بدنه، طبق آیین‌نامه، به عهده بیمه‌گذار است و این جمله با شماره ماده آمده است.
+
+![پرسش درباره آنچه بیمه بدنه به عهده بیمه‌گذار می‌گذارد](docs/screenshots/35-qa-deductible.png)
 
 ## استناد، امتناع، گزارش رویداد و نظارت انسان
 
-پاسخ پرسش‌ها فقط از آیین‌نامه‌های موجود در سامانه ساخته می‌شود و شماره منبع دارد. اگر مستندی پیدا نشود، سامانه همان را می‌گوید و از خودش جواب نمی‌سازد.
-
-![پاسخ با شماره ماده](docs/screenshots/15-assistant.png)
-
-![امتناع وقتی پرسش خارج از آیین‌نامه‌هاست](docs/screenshots/16-assistant-refusal.png)
+همان قاعده استناد و امتناع در بخش دستیار خرید دیده شد: پاسخ یا به ماده وصل است، یا صریحاً می‌گوید مستندی نیست.
 
 ورود، مشاهده پرونده، جست‌وجو و تصمیم کارشناس در گزارش رویدادها ثبت می‌شود. در تصویر زیر شناسه کاربران پوشانده شده است.
 
@@ -116,8 +148,8 @@
 
 ## English
 
-**shekvabim** is a Persian, right-to-left assistant for Central Insurance of Iran: complaint handling and insurance-buying guidance for call #1.
+**shekvabim** is a Persian, right-to-left assistant for Central Insurance of Iran: complaint handling, a buying assistant, and policy review for call #1.
 
-A citizen files a complaint in ordinary language. The prototype classifies the line and the complaint type, extracts dates and amounts, builds a timeline, flags delay against the rule for that line, and places the relevant regulation next to the case with an article citation. It then suggests a next step — refer to the insurer, reply directly, or ask for documents — and drafts the text. Nothing is sent until a Central Insurance expert confirms it. The insurer’s reply and the Central Insurance reply sit on separate tabs. Citizens, insurer staff, experts and administrators each see only their own work. A buying guide and a clause-by-clause policy review cite the regulation they rely on, and the system will not call something a violation unless a source supports it. If no source is found, it says so.
+A citizen files a complaint in ordinary language. The prototype classifies the line and the complaint type, extracts dates and amounts, builds a timeline, flags delay against the rule for that line, and places the relevant regulation next to the case with an article citation. It then suggests a next step — refer to the insurer, reply directly, or ask for documents — and drafts the text. Nothing is sent until a Central Insurance expert confirms it. The insurer’s reply and the Central Insurance reply sit on separate tabs. Citizens, insurer staff, experts and administrators each see only their own work. The buying assistant answers ordinary questions — a workshop, compulsory motor cover, an exclusion — with article citations, and refuses when it has no source. Its guided path asks a short questionnaire and returns mandatory cover, a comparison and a checklist. Policy review takes a pasted policy and judges each clause with a reason and, where one exists, a citation. It will not call a clause a violation unless a regulation supports that.
 
 The pictures in this file are from that running prototype. Complaints and company names in them are synthetic. The demo uses rules and a stand-in model. A real language model, OCR of scanned documents, continuous learning, and integration with Central Insurance systems are planned, not built. Source code is available to evaluators on request. A captioned walkthrough is in [`docs/index.html`](docs/index.html).
